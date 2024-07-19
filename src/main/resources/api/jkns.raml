@@ -1,0 +1,24 @@
+#%RAML 1.0
+title: jkns
+protocols:
+  - HTTP
+mediaType: 
+- application/json
+
+
+/Order:
+  post:
+    body:
+      application/json:
+        examples:
+          {
+            "ordernum" : "123"
+          }
+    responses:
+            200:
+                    body:
+                            application/json:
+                                    examples:
+                                            {
+                                              "status" : "success"
+                                            }  
